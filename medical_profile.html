@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Medical Profile</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/medical_profile.css">
+	<link rel="stylesheet" type="text/css" href="css/nav_style.css">
+	<link rel="stylesheet" type="text/css" href="css/footer_style.css">
+	<!-- Bootstrap/fontAwesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!-- nav -->
+	<script src="./js/header.js"></script>
+	<section id="app" class="containerBgc">
+		<!-- Title -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 title">
+					<img src="imgs/Hospital.png" alt="profile" width="120" height="120">
+					<!-- username here -->
+
+	          <p class="headTitle"> {{ user.displayName }} </p>
+	          </h4>
+
+	          </p>
+	          <!-- Address here -->
+	          <p class="address" v-for="info in centerInfo"> {{ info.address.street }}, {{ info.address.city }}, {{ info.address.state }}, {{ info.address.zipcode }}, {{ info.address.country }} </p>
+	          <!-- Total donations -->
+	          <p class="donations">
+	            Total Donations: {{ total }}
+	          </p>
+
+	        </div>
+	      </div><!-- row -->
+	    </div><!-- container-fluid(for Title) -->
+	    <!-- Content -->
+	    <div class="container-fluid">
+	      <div class="row">
+	        <div class="col-md-8 col-md-offset-2 content">
+	          <div class="totalItem">
+	            <div class="itemName">
+	              <h3>Masks</h3>
+	              <hr style="width:40px; color:#33a6b8; height:4px; background-color:#FF995B;text-align:left;margin-top:3px;" />
+	            </div>
+	            <div class="arrival" v-for='neededItem in itemNeedsInfo' v-if="neededItem.item === 'masks'">
+	              <p> Recieved: {{ neededItem.received }} </p>
+	              <p> Still Need: {{ neededItem.needed  }} </p>
+	              <!--               {{ itemNeedsInfoGroupedByItem.masks.needed }} -->
+	            </div>
+	            <table>
+	              <thead>
+	                <tr>
+	                  <th>Donator</th>
+	                  <th class="quantity">Quantity</th>
+	                  <th class="donateDate">Date</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr v-for="field in maskInfo">
+	                  <!-- user here -->
+	                  <td> {{ field.userName }} </td>
+	                  <!-- Number here -->
+	                  <td class="quantity"> {{ field.quantity }} </td>
+	                  <!-- data here -->
+	                  <td class="donateDate"> {{ field.donatedAt.toDate() }} </td>
+	                </tr>
+	              </tbody>
+	            </table>
+	          </div>
+	          <!-- Another Item -->
+	          <div class="totalItem">
+	            <div class="itemName">
+	              <h3>Medical Gloves</h3>
+	              <hr style="width:40px; color:#33a6b8; height:4px; background-color:#FF995B;text-align:left;margin-top:3px;" />
+	            </div>
+	            <div class="arrival" v-for='neededItem in itemNeedsInfo' v-if="neededItem.item === 'gloves'">
+	              <p>Recieved: {{ neededItem.received }} </p>
+	              <p>Still Need: {{ neededItem.needed }} </p>
+	            </div>
+	            <table>
+	              <thead>
+	                <tr>
+	                  <th>Donator</th>
+	                  <th class="quantity">Quantity</th>
+	                  <th class="donateDate">Date</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr v-for='field in gloveInfo'>
+	                  <!-- user here -->
+	                  <td> {{ field.userName }}</td>
+	                  <!-- Number here -->
+	                  <td class="quantity"> {{ field.quantity }} </td>
+	                  <!-- data here -->
+	                  <td class="donateDate"> {{ field.donatedAt.toDate() }} </td>
+	                </tr>
+
+	              </tbody>
+	            </table>
+	          </div>
+	          <!-- The third Item -->
+	          <div class="totalItem">
+	            <div class="itemName">
+	              <h3>Isolation Gowns</h3>
+	              <hr style="width:40px; color:#33a6b8; height:4px; background-color:#FF995B;text-align:left;margin-top:3px;" />
+	            </div>
+	            <div class="arrival" v-for='neededItem in itemNeedsInfo' v-if="neededItem.item === 'gowns'">
+	              <p>Recieved: {{neededItem.received }} </p>
+	              <p>Still Need: {{ neededItem.needed}} </p>
+	            </div>
+	            <table v-if>
+	              <thead>
+	                <tr>
+	                  <th>Donator</th>
+	                  <th class="quantity">Quantity</th>
+	                  <th class="donateDate">Date</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr v-for='field in gownInfo'>
+	                  <!-- user here -->
+	                  <td> {{ field.userName }}</td>
+	                  <!-- Number here -->
+	                  <td class="quantity"> {{ field.quantity }} </td>
+	                  <!-- data here -->
+	                  <td class="donateDate"> {{ field.donatedAt.toDate()  }} </td>
+	                </tr>
+	              </tbody>
+	            </table>
+
+	          </div>
+
+	          <!--- the fourth item--->
+
+	          <div class="totalItem">
+	            <div class="itemName">
+	              <h3>Shields</h3>
+	              <hr style="width:40px; color:#5A5A5A; height:4px; background-color:#FF995B;text-align:left;margin-top:3px;" />
+	            </div>
+	            <div class="arrival" v-for='neededItem in itemNeedsInfo' v-if="neededItem.item === 'shields'">
+	              <p>Recieved: {{ neededItem.received }} </p>
+	              <p>Still Need: {{ neededItem.needed }} </p>
+	            </div>
+	            <table>
+	              <thead>
+	                <tr>
+	                  <th>Donator</th>
+	                  <th class="quantity">Quantity</th>
+	                  <th class="donateDate">Date</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr v-for='field in shieldInfo'>
+	                  <!-- user here -->
+	                  <td> {{ field.userName }}</td>
+	                  <!-- Number here -->
+	                  <td class="quantity"> {{ field.quantity }} </td>
+	                  <!-- data here -->
+	                  <td class="donateDate"> {{ field.donatedAt.toDate()  }} </td>
+	                </tr>
+	              </tbody>
+	            </table>
+	          </div>
+
+	          <!--the fifth item-->
+	              <div class="totalItem">
+	            <div class="itemName">
+	              <h3>Goggles</h3>
+	              <hr style="width:40px; color:#5A5A5A; height:4px; background-color:#FF995B;text-align:left;margin-top:3px;" />
+	            </div>
+	            <div class="arrival" v-for='neededItem in itemNeedsInfo' v-if="neededItem.item === 'goggles'">
+	              <p>Recieved: {{ neededItem.received }} </p>
+	              <p>Still Need: {{ neededItem.needed }} </p>
+	            </div>
+	            <table>
+	              <thead>
+	                <tr>
+	                  <th>Donator</th>
+	                  <th class="quantity">Quantity</th>
+	                  <th class="donateDate">Date</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr v-for='field in goggleInfo'>
+	                  <!-- user here -->
+	                  <td> {{ field.userName }}</td>
+	                  <!-- Number here -->
+	                  <td class="quantity"> {{ field.quantity }} </td>
+	                  <!-- data here -->
+	                  <td class="donateDate"> {{ field.donatedAt.toDate()  }} </td>
+	                </tr>
+	              </tbody>
+	            </table>
+	          </div>
+
+
+
+	           <!--the sixth item-->
+	              <div class="totalItem">
+	            <div class="itemName">
+	              <h3>Ventilators</h3>
+	              <hr style="width:40px; color:#5A5A5A; height:4px; background-color:#FF995B;text-align:left;margin-top:3px;" />
+	            </div>
+	            <div class="arrival" v-for='neededItem in itemNeedsInfo' v-if="neededItem.item === 'ventilators'">
+	              <p>Recieved: {{ neededItem.received }} </p>
+	              <p>Still Need: {{ neededItem.needed }} </p>
+	            </div>
+	            <table>
+	              <thead>
+	                <tr>
+	                  <th>Donator</th>
+	                  <th class="quantity">Quantity</th>
+	                  <th class="donateDate">Date</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr v-for='field in ventilatorInfo'>
+	                  <!-- user here -->
+	                  <td> {{ field.userName }}</td>
+	                  <!-- Number here -->
+	                  <td class="quantity"> {{ field.quantity }} </td>
+	                  <!-- data here -->
+	                  <td class="donateDate"> {{ field.donatedAt.toDate()  }} </td>
+	                </tr>
+	              </tbody>
+	            </table>
+	          </div>
+
+
+	        </div>
+	      </div>
+
+	      <!-- row -->
+
+		</div><!-- container-fluid(for Content) -->
+		</div>
+
+	</section>
+
+	<!-- footer -->
+	<script src="./js/footer.js"></script>
+	<!-- Js -->
+	<script>
+		// var nav = responsiveNav(".nav-collapse");
+	</script>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"> </script>
+	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyCTdSk92DMIVx0dzjt6XVWob8DjmivJgvg",
+	    authDomain: "donatemed-3fcd6.firebaseapp.com",
+	    databaseURL: "https://donatemed-3fcd6.firebaseio.com",
+	    projectId: "donatemed-3fcd6",
+	    storageBucket: "donatemed-3fcd6.appspot.com",
+	    messagingSenderId: "617277227692",
+	    appId: "1:617277227692:web:8260565216f6fbc49ed509",
+	    measurementId: "G-R7EK7XS4QN"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="./js/medicalProfile.js"></script>
+</body>
+
+
+</html>

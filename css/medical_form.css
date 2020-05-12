@@ -1,0 +1,147 @@
+*{
+	/*border: 1px solid #aaa;*/
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 0.04em;
+}
+
+@font-face {
+  font-family: 'Apple LiGothic';
+  src:  url('../font/AppleLiGothicMedium.ttf');
+}
+body{
+  position: relative;
+}
+.containerBgc{
+	/* background-color: #eee; */
+	background-image: url("../imgs/confirm_bgc_long.png");
+	background-position: -507px -279px;
+}
+.title{
+	height: 260px;
+	position: relative;
+}
+
+.headTitle{
+	font-size: 46px;
+  font-family: 'Apple LiGothic';
+	letter-spacing: 0.01em;
+	font-size: 46px;
+	color: #3D5A80;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subTitle {
+	position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	color: #3D5A80;
+	font-size: 18px;
+	text-align: center;
+}
+
+b{
+	color: #3D5A80;
+	font-size: 18px;
+}
+
+
+.content{
+	height: 1000px;
+	background-color: #fff;
+	margin-bottom: 80px;
+}
+
+form{
+	width:500px;
+	margin-left: auto;
+	margin-right: auto;
+	/* margin-top: 80px; */
+	font-family: 'Lato', sans-serif;
+	padding-top: 3em;
+	padding-bottom:3em;
+}
+
+.nameDiv{
+	margin:40px auto 20px auto;
+}
+
+
+.listItems{
+	list-style: none;
+}
+
+.submit{
+	width: 9em;
+	height:2.5em;
+	border-radius:3.5em;
+	background-color: #3D5A80;
+	color:white;
+	font-size: 16px;
+	border:none;
+	margin-right:0.6em;
+	text-align: center;
+	padding-top: 8px;
+	margin-top: 3em;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.itemNum{
+	border-radius:4px;
+	height:2em;
+	border: 1px solid #DBD8D8;
+}
+
+/* #lastName{
+	margin-left: 1em;
+	width:240px;
+}
+
+#firstName{
+	width:240px;
+} */
+
+.items{
+	display: flex;
+	justify-content: space-between;
+	padding:0.5em 0;
+	color:#777777;
+	font-size: 14px;
+}
+
+.form-group, .needTitle{
+	margin-top:1.5em;
+}
+
+.needTitle{
+	margin-bottom:0.8em;
+}
+
+.reminder{
+	font-size: 14px;
+	color:#bbbbbb;
+	margin-top: 0.6em;
+	font-weight: 300;
+}
+
+abbr{
+	color:#822B2B;
+}
+
+.inputName, .needTitle{
+	color:#5A5A5A;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+p, .items{
+	color:#777777;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+}

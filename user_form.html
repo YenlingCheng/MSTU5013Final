@@ -1,0 +1,135 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>User Form</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/user_form.css">
+	<link rel="stylesheet" type="text/css" href="css/nav_style.css">
+	<link rel="stylesheet" type="text/css" href="css/footer_style.css">
+	<!-- Bootstrap/fontAwesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<script src="./js/header.js"></script>
+	<script src="./js/header.js"></script>
+	<div id="userForm">
+		<section class="containerBgc">
+			<!-- Title -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 title">
+						<p class="headTitle">DonateMed</p>
+						<p class="subTitle">Donate <b>Medical Supplies</b> and Make Change Together</p>
+					</div>
+				</div><!-- row -->
+			</div><!-- container-fluid(for Title) -->
+			<!-- Content -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 content">
+						<form @submit.prevent="submitForm">
+							<div class="form-group nameDiv">
+								<label class="inputHeader">Name</label>
+								<div class="form-inline names">
+									<p>{{userInfo.userName}}</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="inputHeader" for="email">Email</label>
+								<p>{{userInfo.userEmail}}</p>
+							</div>
+							<div class="form-group" id="phone">
+								<label class="inputHeader">Phone</label>
+								<span>
+									<abbr>*</abbr>
+								</span>
+								<input type="text" class="form-control" id="phone" placeholder="Phone Number" v-model="userInfo.phone">
+								<p class="reminder">Please enter valid contact number so that we can reach out to you</p>
+							</div>
+							<div class="donateItem">
+								<label class="donateTitle">Donate Items/Numbers</label>
+								<span>
+									<abbr>*</abbr>
+								</span>
+								<div class="listItems">
+									<li class="items">
+										Surgical Masks
+										<span><input class="itemNum" type="number" v-model.number="donationItem.surgicalMasks"></input></span>
+									</li>
+									<li class="items">Venilators
+										<span>
+											<input class="itemNum" type="number" v-model.number="donationItem.ventilators"></input>
+										</span>
+									</li>
+									<li class="items">Medical Gloves
+										<span>
+											<input class="itemNum" type="number" v-model.number="donationItem.medicalGloves"></input>
+										</span>
+									</li>
+									<li class="items">Isolation Gowns
+										<span>
+											<input class="itemNum" type="number" v-model.number="donationItem.isolationGowns"></input>
+										</span>
+									</li>
+									<li class="items">Goggles
+										<span>
+											<input class="itemNum" type="number" v-model.number="donationItem.goggles"></input>
+										</span>
+									</li>
+									<li class="items">Medical Shield
+										<span class="numberCount">
+											<input class="itemNum" type="number" v-model.number="donationItem.medicalShield"></input>
+										</span>
+									</li>
+								</div>
+							</div>
+							<!-- <a class="" href="./confirmation_user.html"> -->
+								<div class="submit" @click="submitForm">Submit</div>
+							<!-- </a> -->
+						</form>
+					</div>
+				</div><!-- row -->
+			</div><!-- container-fluid(for Content) -->
+	</div>
+
+	</section>
+	</div>
+
+	<!-- footer -->
+	<script src="./js/footer.js"></script>
+	<!-- Js -->
+	<script>
+		// var nav = responsiveNav(".nav-collapse");
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCTdSk92DMIVx0dzjt6XVWob8DjmivJgvg",
+			authDomain: "donatemed-3fcd6.firebaseapp.com",
+			databaseURL: "https://donatemed-3fcd6.firebaseio.com",
+			projectId: "donatemed-3fcd6",
+			storageBucket: "donatemed-3fcd6.appspot.com",
+			messagingSenderId: "617277227692",
+			appId: "1:617277227692:web:8260565216f6fbc49ed509",
+			measurementId: "G-R7EK7XS4QN"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		// firebase.analytics();
+	</script>
+
+	<script src="./js/userForm.js"></script>
+</body>
+
+</html>

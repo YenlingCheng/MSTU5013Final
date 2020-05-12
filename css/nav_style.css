@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Apple LiGothic';
+  src:  url('../font/AppleLiGothicMedium.ttf');
+}
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap');
+*{
+    /*border: 1px solid #ddd;*/
+    font-family: 'Lato', sans-serif;
+    color: #5A5A5A;
+}
+*{
+    /*border: 1px solid #ddd;*/
+
+}
+body {
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+}
+.main_nav {
+    height: 50px;
+    background-color: #3D5A80;
+    position: absolute;
+    z-index: 100;
+}
+
+.col-md-12 .fa-bars {
+    display: none;
+}
+
+.nav_left {
+    line-height: 45px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_left .logo{
+    font-family: 'Apple LiGothic';
+    letter-spacing: 0.01em;
+    font-size: 19px;
+    color: #FFF;
+    margin-right: 15px;
+    font-weight: 700;
+}
+.nav_left ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_left li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.nav_left a {
+    display: block;
+    padding: 0 15px 0 15px;
+    margin: 0;
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.nav_left a:hover {
+    text-decoration: none;
+    color: #FF995B;
+}
+
+.nav_right {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 15px;
+
+}
+.nav_right ul li a { 
+    text-decoration: none; 
+}
+/*.nav_right_icons a:active{
+    text-decoration: none;
+    color: #3D5A80;
+}*/
+
+.icon-cart, .icon-heart2, .icon-user {
+    color:#fff;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    line-height: 50px;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    transition-duration: .7s;
+}
+
+.icon_link:hover {
+    text-decoration: none;
+    color: #33a6b8;
+}
+
+/*.icon_link:hover {
+    text-decoration: none;
+    color: #33a6b8;
+}*/
+.rwd_wrap {
+    display: none;
+}
+
+/*MOBIL VERSION, 0 > 600px*/
+@media screen and (max-width: 500px){
+
+    body {
+        overflow: hidden;
+    }
+
+    .main_nav {
+        position: relative;
+        padding-left: 0;
+    }
+
+    .col-md-12 .fa-bars {
+        display: inline-block;
+        color: #fff;
+        font-size: 3em;
+        line-height: 50px;
+    }
+
+    .nav_right, .nav_left {
+        display: none;
+    }
+
+    .sub_menu  {
+        /*left: -9999px;*/
+         background-color: #111;
+        color: #fff;
+        
+    }
+    .sub_menu a{
+        color: #fff;
+        text-align: center;
+    }
+    .member_sub_menu_data{
+        border: 1px solid #111;
+    }
+    .rwd_wrap {
+        background: rgba(61, 90, 128, 0.7);
+        width: 100%!important;
+        padding-right: 0;
+
+    }
+
+    .rwd_wrap> ul> li:not(:last-child){
+        border-bottom: 1px solid rgba(77, 77, 77, 0.1);
+    }
+
+    .rwd_wrap> ul> li:last-child{
+        padding-top: 10px;
+    }
+
+    .rwd_wrap a {
+        display: block;
+        height: 45px;
+        color: #fff;
+        font-size: 1.2em;
+        line-height: 45px;
+        transition: all 0.5s ease-in-out;
+        text-decoration: none;
+        padding-left: 15px;
+    }
+
+    .clicked {
+        background: #4d4d4d;
+        color: #fff!important;
+        text-decoration: none;
+    }
+
+    .rwd_wrap a:hover {
+        text-decoration: none;
+    }
+
+    .icon_rwd {
+        color: #4d4d4d;
+        font-size: 1.2em;
+        cursor: pointer;
+        padding-left: 0;
+    }
+
+    .member_nav li a{
+        padding: 0 30px;
+    }
+
+    .member_nav{
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .triangle_wrap {
+        position: relative;
+    }
+
+    .glyphicon-triangle-bottom {
+        position: absolute;
+        top: 15px;
+        left: 90%;
+        display: inline-block;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Apple LiGothic';
+  src:  url('../font/AppleLiGothicMedium.ttf');
+}
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap');
+*{
+    /*border: 1px solid #ddd;*/
+    font-family: 'Lato', sans-serif;
+    color: #5A5A5A;
+}
+footer {
+    padding: 30px 0 0 0;
+    height: 200px;
+    background-color: rgba(61, 90, 128, 0.85);
+}
+
+.link_li {
+    list-style-type: none;
+    line-height: 45px;
+}
+
+.link_a {
+    color: #fff;
+    font-size: 12pt;
+}
+
+.link_a:hover {
+    text-decoration: none;
+    color: #998675;
+}
+
+.subscribe {
+    font-size: 14pt;
+    color: #fff;
+    line-height: 45px;
+}
+
+.footer_right{
+    text-align: center;
+}
+.copyright {
+    color: #fff;
+    padding-top: 25px;
+    /*padding-left: 150px;*/
+    font-size: 9pt;
+}
+
+.footer_right h1{
+    font-family: 'Apple LiGothic';
+    letter-spacing: 0.01em;
+    font-size: 42px;
+    color: #FFF;
+
+}
+

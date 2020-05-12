@@ -1,0 +1,145 @@
+* {
+  /*border: 1px solid #aaa;*/
+  font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple LiGothic';
+  src:  url('../font/AppleLiGothicMedium.ttf');
+}
+
+.containerBgc {
+  /* background-color: #eee; */
+  background-image: url("../imgs/confirm_bgc_long.png");
+	background-position: -650px -200px;
+}
+
+.title {
+  height: 310px;
+  position: relative;
+}
+
+.content {
+  background-color: #fff;
+  margin-bottom: 80px;
+  font-size: 16px;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  margin-top: 50px;
+
+}
+hr{
+  display: inline-block;
+}
+.headTitle {
+  text-align: center;
+}
+
+img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headTitle {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	letter-spacing: 0.01em;
+	font-size: 32px;
+	color: #3D5A80;
+  font-weight: 600;
+}
+
+.address {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3D5A80;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing:0.04em;
+  margin-top: 30px;
+}
+
+.donations {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3D5A80;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing:0.04em;
+  margin-top: 35px;
+}
+
+.totalItem {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+}
+
+.itemName {
+  float: left;
+  letter-spacing:0.04em;
+}
+
+.arrival {
+  float: right;
+  text-align: right;
+  font-size: 15px;
+  letter-spacing:0.03em;
+  display: inline-block;
+
+}
+
+/* .header{
+	margin-top:3em;
+} */
+table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  border-collapse: collapse;
+  text-align: left;
+  /* border: 1px solid black; */
+  table-layout: fixed;
+  letter-spacing:0.04em;
+  font-family: 'Lato', sans-serif;
+}
+
+td {
+  height: 50px;
+  /* border: 1px solid black; */
+  color:#777777;
+  font-size: 15px;
+  font-weight: 300;
+
+}
+
+th {
+  height: 50px;
+  font-size: 17px;
+  font-weight: 400;
+
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+.donateDate {
+  text-align: right;
+}
+
+.itemTitle{
+  color:  #3D5A80;
+  font-size: 25px;
+  font-weight: 500;
+}

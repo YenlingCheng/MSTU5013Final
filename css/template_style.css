@@ -1,0 +1,15 @@
+*{
+	/*border: 1px solid #aaa;*/
+}
+.containerBgc{
+	background-color: #eee;
+}
+.title{
+	height: 210px;
+}
+
+.content{
+	height: 600px;
+	background-color: #fff;
+	margin-bottom: 80px;
+}

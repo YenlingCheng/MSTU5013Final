@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap');
+*{
+	/*border: 1px solid #111;*/
+	color: #666;
+	font-family: 'Lato', sans-serif;
+	color: #5A5A5A;
+}
+.detail{
+	/*height: 90vh;*/
+	background: url(../imgs/bgc2.jpg);
+	-webkit-background-size: cover;
+  	background-size: cover;
+}
+/*===========left===========*/
+.left{
+	text-align: left;
+	top: 180px;
+	height: 300px;
+	margin-bottom: 100px;
+}
+.left .text{
+	display: inline-block;
+	text-align: left;
+
+}
+.left .text h1{
+	font-weight: 700;
+}
+.left .text h3{
+	font-weight: 300;
+	font-size: 18px;
+}
+.left .text span{
+	color: #EE6C4D;
+}
+.left .text hr{
+	width: 70px;
+	height: 5px;
+	background-color: #3D5A80;
+	display: inline-block;
+}
+/*===========right===========*/
+.right{
+	margin: 80px auto;
+}
+.column{
+	border: 1px solid #c4c4c4;
+	border-radius: 6px;
+	padding: 20px;
+	text-align: center;
+}
+.column h2{
+	font-size: 20px;
+}
+.progressCtn{
+	margin: 20px 0;
+	padding: 0 15px;
+}
+.progressCtn .itemName{
+	padding-top: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.progressCtn .itemTarget{
+	font-size: 13px;
+	font-weight: 400;
+	text-align: right;
+}
+
+.bar{
+	height: 15px;
+	background-color: #fff;
+	border-radius: 100px;
+	overflow: hidden;
+	border: 1px solid #FFB385;
+	margin-top: 10px;
+}
+
+.barPercent{
+	background-color: #FFB385;
+	width: 80%;
+	height: 15px;
+}
+
+.right button{
+	width: 100%;
+	height: 40px;
+	border-radius: 6px;
+	color: #fff;
+	background-color: #3D5A80;
+	margin: 20px 0 40px 0;
+}
+
+
+

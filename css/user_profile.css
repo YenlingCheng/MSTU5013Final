@@ -1,0 +1,113 @@
+* {
+  /*border: 1px solid #aaa;*/
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+body {
+  position: relative;
+}
+
+.containerBgc {
+  /* background-color: #eee; */
+  background-image: url("../imgs/confirm_bgc_long.png");
+  background-position: -650px -200px;
+}
+
+.title {
+  height: 280px;
+  position: relative;
+}
+
+.content {
+  background-color: #fff;
+  margin-bottom: 80px;
+  font-size: 16px;
+  padding-top: 3em;
+}
+
+.userName, p {
+  text-align: center;
+}
+
+img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.userName {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #3D5A80;
+  font-weight: 600;
+}
+
+.contentHeader {
+  color: #3D5A80;
+  font-size: 26px;
+}
+
+.totalDonation {
+  color: #3D5A80;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p {
+  letter-spacing: 0.06em;
+}
+
+.header{
+	margin-top:2em;
+}
+
+li {
+  list-style: none;
+  padding: 6px 0 6px 0
+}
+
+/* table{
+	margin:40px auto 40px auto;
+} */
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #777777;
+  padding: 5px;
+}
+
+td {
+  height: 150px;
+  /* border-bottom: 1px solid #777777; */
+	color: #777777;
+}
+
+th {
+  height: 65px;
+  color: #5A5A5A;
+  font-weight: 700;
+  border-bottom: 2px solid #bbbb;
+}
+
+.hospital {
+  font-weight: 500;
+}
+
+.quantity {
+  text-align: center;
+  right: 20%;
+  font-size: 16px;
+}
+
+.item {
+  font-size: 16px;
+}

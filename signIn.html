@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Sign In</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/signIn_style.css">
+	<link rel="stylesheet" type="text/css" href="css/nav_style.css">
+	<link rel="stylesheet" type="text/css" href="css/footer_style.css">
+	<!-- Bootstrap/fontAwesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- font -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+<!-- nav -->
+<section id="app" class="signIn">
+  <div class="container-fluid" style="padding: 0 0;">
+      <div class="row" style="padding: 0 0; margin:0;">
+          <div class="col-md-6 left" style="padding: 0 0;">
+            <div class="text">
+              <h1>The Biggest Medical Croudsourcing Platform</h1>
+              <hr>
+              <h3>Lets’ make impact together and save more lives.</h3><br>
+              <h4>- DonateMed</h4>
+            </div>
+          </div>
+          <div class="col-md-6 formCtn" style="">
+            <form class="form-signin" @submit.prevent>
+              <div class="title">
+                <h1 class="">Welcome!</h1>
+                <h4>Create an account</h4>
+								<h4>{{displayName}}</h4>
+              </div>
+              <label for="inputName" class="sr-only">Name</label>
+              <input type="string" id="inputName" class="form-control" placeholder="Name" v-model="name" required autofocus>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" v-model="email" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" v-model="password" required>
+							<label for="checkMed" class="checkMed">
+								<input type="radio" id="radioBox" v-model="isMed" value="true" required>
+								<span>Please check if you are a member of Medical Center</span>
+							</label>
+
+
+              <button class="btn btn1 btn-md btn-block" type="submit" @click="handleSignUp">Sign up</button>
+              <button class="btn btn1 btn-md btn-block" type="submit" @click="logIn">Sign In</button>
+							<button class="btn btn2 btn-md btn-block" type="submit" @click="handleSignOut">Sign Out</button>
+            </form>
+
+          </div>
+      </div> <!-- ROW -->
+  </div><!-- container-fluid -->
+</section>
+<!-- footer -->
+<script src="./js/footer.js"></script>
+<!-- Js -->
+<script>
+	// var nav = responsiveNav(".nav-collapse");
+</script>
+
+<script script src = "https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js">
+</script>
+
+<!-- Add SDKs for Firebase Firestore-->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCTdSk92DMIVx0dzjt6XVWob8DjmivJgvg",
+    authDomain: "donatemed-3fcd6.firebaseapp.com",
+    databaseURL: "https://donatemed-3fcd6.firebaseio.com",
+    projectId: "donatemed-3fcd6",
+    storageBucket: "donatemed-3fcd6.appspot.com",
+    messagingSenderId: "617277227692",
+    appId: "1:617277227692:web:8260565216f6fbc49ed509",
+    measurementId: "G-R7EK7XS4QN"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./js/signIn.js"></script>
+</body>
+</html>

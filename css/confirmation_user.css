@@ -1,0 +1,132 @@
+* {
+  /*border: 1px solid #aaa;*/
+  font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple LiGothic';
+  src: url('../font/AppleLiGothicMedium.ttf');
+}
+
+.containerBgc {
+  /* background-color: #eee; */
+  background-image: url("../imgs/confirm_bgc_long.png");
+  background-repeat: no-repeat;
+  background-position: -200px -400px;
+}
+
+.title {
+  height: 240px;
+  position: relative;
+}
+
+.headTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Apple LiGothic';
+  letter-spacing: 0.01em;
+  font-size: 46px;
+  color: #3D5A80;
+}
+
+.subTitle {
+	position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3D5A80;
+  font-size: 18px;
+	text-align: center;
+}
+
+.content {
+  height: 700px;
+  background-color: #fff;
+  margin-bottom: 80px;
+	padding-top:3em;
+
+}
+
+.congrats {
+  /* width: 80%; */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-bottom: 5em;
+  margin-top: 5em;
+	/* padding:3em 0 3em 0; */
+}
+
+.header {
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  color: #EE6C4D;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+}
+
+img {
+  width: 160px;
+  height: 160px;
+  margin-top: 40px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.notes {
+  color: #5A5A5A;
+  letter-spacing: 0.04em;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+	margin-top: 1em;
+}
+
+.confirm {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 4em;
+}
+
+.nextSteps {
+  color: #7777;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.button {
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+
+.buttonA, .buttonB {
+  width: 180px;
+  height: 46px;
+  border-radius: 80px;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.buttonA {
+  background-color: #3D5A80;
+  color: white;
+  font-size: 16px;
+  border: none;
+  margin-right: 0.6em;
+}
+
+.buttonB {
+  border: 2px solid #3D5A80;
+  color: #3D5A80;
+  font-size: 16px;
+  margin-left: 0.6em;
+}

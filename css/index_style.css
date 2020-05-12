@@ -1,0 +1,189 @@
+*{
+	/*border: 1px solid #aaa;*/
+  font-family: 'Lato', sans-serif;
+  color: #5A5A5A;
+}
+body{
+  position: relative;
+}
+/*===========banner===========*/
+.btnContainer{
+	height: 300px;
+	/*background-color: #eee;*/
+	margin: 40px 0px 25px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  background: url(../imgs/banner.jpg) ;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 35%;
+
+}
+/*.btnContainer button{
+	margin: 100px 20px 0px 20px;
+	text-decoration: none;
+	padding: 10px 30px;
+	color: #3D5A80;
+  background-color: #fff;
+	border-radius: 100px;
+	border: none;
+  max-width: 1200px;
+  font-weight: 700;
+  border: 1px solid rgba(61, 90, 128, 0.85);
+  transition-duration: .5s;
+}
+.btnContainer button:hover{
+  background-color: #3D5A80
+  color: #fff;
+} */
+.btnContainer a{
+  color:  #3D5A80;
+  transition-duration: .5s;
+  margin: 100px 20px 0px 20px;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3D5A80;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 100px;
+  border: none;
+  max-width: 1200px;
+  font-weight: 700;
+  border: 2px solid rgba(61, 90, 128, 0.85);
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.btnContainer a:hover{
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(61, 90, 128, 0.7);
+  border: 2px solid #fff;
+}
+
+/*===========filter/search===========*/
+.dropdown{
+	display: inline-block;
+	float: right;
+  margin-right: 0;
+}
+.dropdown button{
+	background-color: #fff;
+	border: 2px solid #3D5A80;
+	border-radius: 6px;
+	height: 30px;
+	padding: 0 10px;
+  width: 100px;
+}
+.dropdown-menu{
+	min-width: none;
+}
+.search-container {
+  float: right;
+  display: inline-flex;
+
+}
+.search-container input[type=text] {
+ 	height: 30px;
+  border: 2px solid #3D5A80;
+	padding-left: 10px;
+	font-size: 13px;
+	width: 140px;
+	border-radius: 6px 0 0 6px;
+}
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 17px;
+  background: #3D5A80;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 0 6px 6px 0;
+  transition: .5s;
+}
+.search-container button i{
+  color: #fff;
+}
+.search-container button:hover {
+  background-color: rgba(61, 90, 128, 0.85);
+}
+/*===========columns===========*/
+.columns{
+	/*border: 1px solid #eee;*/
+	margin-bottom: 80px;
+}
+.columnCtn{
+  height: 320px;
+  /*background-color: #eee;*/
+  margin-top: 25px;
+}
+
+.column{
+  height: 300px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.imgCtn{
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: 6px 6px 0 0;
+}
+.imgCtn img{
+  height: 100%;
+  margin-left: -27px;
+  /*position: absolute;*/
+}
+.textCtn{
+  height: 140px;
+  border-right : 2px solid #ddd;
+  border-left : 2px solid #ddd;
+  border-bottom : 2px solid #ddd;
+  border-radius: 0 0 6px 6px ;
+
+}
+.columnInfo{
+  padding: 15px 30px;
+  font-size: 14px;
+  color: #555;
+}
+.hospital a{
+  color: #5A5A5A;
+  transition: .5s;
+  cursor: pointer;
+}
+.hospital a:hover{
+  color: #EE6C4D;
+  text-decoration: none;
+}
+.textCtn .colResource{
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  color: #5A5A5A;
+}
+.textCtn .columnDonate{
+  text-align: center;
+  top:10px;
+}
+.textCtn .columnDonate .raise{
+  font-size: 14px;
+  color: #EE6C4D;
+  font-weight: 700;
+  padding: 15px 0px 5px 0px;
+}
+.textCtn .columnDonate button{
+  width: 80px;
+  padding: 2px;
+  border-radius: 6px;
+  background-color: #3D5A80;
+  color: #fff;
+  border: none;
+}
